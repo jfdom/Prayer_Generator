@@ -1,0 +1,25 @@
+# config.yaml
+seed_config:
+  base_path: "/home/jonathan/projects/Prayer_Generator"
+  prayers_per_scroll: 12
+  prayers_per_cycle: 24
+  total_cycles: 1
+  include_kjv_in_prayer_prompt: false         # set true to re-send KJV into prayer prompt
+  include_kjv_in_fullscroll_prompt: false     # set true to re-send KJV into FULL_SCROLL prompt
+  pattern_floor: 3                            # minimum distinct patterns to weave (not a cap)
+
+  # Durations in seconds
+  rate_limit_delay: 10
+  error_pause_duration: 60
+
+
+llm_config:
+  model: gpt-4o-mini
+  model_scan: gpt-4o-mini
+  model_assessment: gpt-4o-mini
+  temperature: 0.6
+
+audit_config:
+  audit_only_synthesis: true
+  max_pending_audits: 3
+  audit_timeout_minutes: 120
